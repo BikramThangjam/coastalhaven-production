@@ -1,6 +1,5 @@
 const config = {
-    API_URL: "http://localhost:5000",
-    // API_URL: "https://coastalhaven-server.onrender.com"
+    API_URL: "https://coastalhaven.onrender.com",
 }
 
 export const {API_URL} = config;

@@ -1,1 +1,1 @@
-export const client_url = "http://localhost:5000";
+export const client_url = "https://coastalhaven.onrender.com";
