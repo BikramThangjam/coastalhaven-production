@@ -9,6 +9,7 @@ import bookingRoutes from "./routes/booking.js";
 import userRoutes from "./routes/user.js";
 import { stripeWebhooks } from "./controllers/booking.js";
 import path from "path";
+import job from "./cron/cron.js"
 
 // CONFIGURATIONS
 const __dirname = path.resolve();
@@ -45,6 +46,7 @@ mongoose.connect(process.env.MONGO_URL, {
     useUnifiedTopology: true
 })
 .then(()=> {
+    job.start();
     app.listen(PORT, ()=> console.log(`Server is listening on ${PORT}`))
 })
 .catch(err => console.log(`${err} did not connect`))
